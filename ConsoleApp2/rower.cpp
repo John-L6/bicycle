@@ -72,3 +72,38 @@ int jj_proba_klasy1()
 
 	return 0;
 }
+
+
+int jj_proba_klasy2()
+{	//Funkcja tworzy klasê Ciooc, wype³nia j¹, drukuje i usuwa
+
+	double jd_sum;						//zmienna pomocnicza
+
+	// Obiektem nazywamy egzemplarz klasy. Tworzymy go jak zmienn¹, poniewa¿, 
+	// w istocie, to jest zmienna.
+	bicycle	*Romet = new bicycle;	//utworzenie DYNAMICZNE obiektu- egzemparza klasy
+
+
+
+	Romet->Set_frame("Romet-Bydgoszcz", 3.34, 53);	//Parametry ramy
+	Romet->Set_bicycle_name("BMT");
+	Romet->Set_bicycle_inner(3.21, 0.8, 2);
+
+	jd_sum = Romet->Sum_bicycle_weight();
+
+	// Mo¿emy utworzyæ obiekt statyczny lub dynamiczny alokuj¹c pamiêæ i u¿ywaj¹c 
+	// wskaŸników. Obiekt tworzy siê za pomoc¹ operatora new i przypisuje do 
+	// wskaŸnika tego samego typu co klasa. 
+	// Do sk³adników klasy dynamicznej najlepiej odwo³ywaæ siê operatorem strza³ki ->.
+	// Zosta³ on stworzony w celu uproszczenia czytelnoœci kodu.
+	// Obiekty dynamiczne zawsze trzeba rêcznie usun¹æ z pamiêci (delete).
+
+
+	cout << "Rower marka: " << Romet->bic_name;
+	cout << ", waga roweru: " << jd_sum << endl;
+
+	delete Romet;						//usuniêcie DYNAMICZNE egzemparza klasy
+
+	return 0;
+}
+

@@ -41,3 +41,5 @@ public:
 
 
 int jj_proba_klasy1();
+
+int jj_proba_klasy2();
